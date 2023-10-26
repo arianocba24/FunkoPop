@@ -22,7 +22,6 @@ import sonidoviento from './images/sonidoViento.mp3';
 import sonidosoplido from './images/soplido.mp3';
 
 
-
 function App() {
   const [isHovered, setSonido] = useState(false);
   const [vTela, setTela] = useState(false);
@@ -30,15 +29,15 @@ function App() {
 
   return (
     <>
-      <div>
-<Parallax pages={10} >
+      <div className='Noche'>
+<Parallax pages={8} >
 
  <ParallaxLayer 
     offset={0}
     speed={0.5}
     >
-      <div className='Noche'>
-        <img className='contenedorImagen' src={luna} style={{width:800 } } >
+      <div >
+        <img className='luna' src={luna} style={{width:800 } } >
         </img>
       </div>
   </ParallaxLayer >
@@ -60,7 +59,7 @@ function App() {
   </ParallaxLayer>
 
   <ParallaxLayer  speed={0.5} style={{ display: 'flex', alignItems: 'center' , justifyContent: 'center' }}
-    sticky={{start:0.7, end:1.1}}>
+    sticky={{start:0.5, end:1}}>
       <div className='aumentar'>
         <img className='imagenAumentada' src={superman} style={{width:150} }  onMouseEnter={() => setSonido(true)} onMouseLeave={() => setSonido(false)}>
         </img>  
@@ -75,24 +74,19 @@ function App() {
   </ParallaxLayer>
 
 
-
- 
   <ParallaxLayer  speed={0.8} style={{ display: 'flex', alignItems: 'normal' , justifyContent: 'center' }}
     sticky={{start:2.1, end:2.9}}>
       <div >
-        <img src={montana} style={{width:1500} }  >
+        <img src={montana}  >
         </img>  
       </div>
   </ParallaxLayer>
 
 
-
-
-
-  <ParallaxLayer  speed={0.6} style={{ display: 'flex', alignItems: 'normal' , justifyContent: 'center' }}
-    sticky={{start:2.4, end:3.1}}>
+  <ParallaxLayer  speed={0.6} style={{ display: 'flex'  }}
+    sticky={{start:2.4, end:3.1}}>g
       <div >
-        <img src={edificioFondo} style={{width:1500} }  >
+        <img src={edificioFondo} >
         </img>  
       </div>
   </ParallaxLayer>
@@ -103,7 +97,7 @@ function App() {
   <ParallaxLayer  speed={0.1} style={{ display: 'flex', alignItems: 'normal' , justifyContent: 'center' }}
     sticky={{start:2.7, end:2.9}}>
       <div >
-        <img src={edificio} style={{width:1500} }  >
+        <img className='MarcoImagenes' src={edificio}  >
         </img>  
       </div>
   </ParallaxLayer>
